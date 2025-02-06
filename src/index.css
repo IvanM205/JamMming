@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  background-color: #eae0d5;
+}
+
+header {
+  height: 5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), 0px 6px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  #266678;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+nav img.logoHeader {
+  width: 2rem;
+}
+
+nav h1 {
+  font-size: 2rem;
+  color: #a9d496;
+}
+
+nav h1 .capitalM {
+  color: #88BDDE;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+}
+
+main h1 {
+  margin: 2rem;
+}
