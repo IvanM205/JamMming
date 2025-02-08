@@ -40,6 +40,7 @@ nav h1 .capitalM {
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #333333;
@@ -47,4 +48,96 @@ main {
 
 main h1 {
   margin: 2rem;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  gap: 10px;
+}
+
+.searchForm input {
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  padding: 9px 13px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  min-width: 150px;
+  max-width: 400px;
+}
+
+.searchForm button {
+  border-radius: 6px;
+  padding: 9px 13px;
+  border: none;
+  background-color: #266678;
+  color: #FFFFFF;
+}
+
+.searchForm button:hover {
+  background-color: #2a7b8b;
+  cursor: pointer;
+}
+
+.searchForm button:active {
+  background-color: #1e4d58;
+  box-shadow: none;
+}
+
+.dataSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 20px;
+  width: 70%;
+}
+
+.rpContainer {
+  width: 400px;
+  min-height: 300px;
+  border: 2px solid #266678;
+  border-radius: 12px;
+  padding: 10px 10px;
+}
+
+.rpContainer h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #266678;
+  color: #FFFFFF;
+  margin: -10px -10px 10px -10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.resultsList {
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.songElement {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 5px auto;
+}
+
+.songElement h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.artistAlbum {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.artistAlbum h4 {
+  margin-bottom: 0.25rem;
 }
