@@ -7,9 +7,12 @@ export default function Results(props) {
         return (
           <li key={obj.id}>
             <Song
+              id={obj.id}
               title={obj.title}
               artist={obj.artist}
               album={obj.album}
+              handleClick={props.addSong}
+              type={"results"}
             />
           </li>
         )
@@ -20,7 +23,7 @@ export default function Results(props) {
     return (
         <article className="rpContainer">
             <h2>Results</h2>
-            <ul className="resultsList">
+            <ul className="songsList">
               {listSongs}
             </ul>
         </article>

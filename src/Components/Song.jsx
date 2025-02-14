@@ -1,5 +1,6 @@
 
 export default function Song(props) {
+    const buttonSymbol = (props.type === "results") ? "+" : "-"
     return (
         <div className="songElement">
             <h3>{props.title}</h3>
@@ -7,6 +8,7 @@ export default function Song(props) {
               <h4>{props.artist}</h4>
               <h4>{props.album}</h4>
             </div>
+            <button onClick={() => {props.handleClick(props)}}>{buttonSymbol}</button>
             <hr/>
         </div>
     )
