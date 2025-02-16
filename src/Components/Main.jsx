@@ -3,18 +3,39 @@ import murmurhash from "murmurhash";
 import Form from "./Form";
 import Results from "/src/Components/Results";
 import Playlist from "./Playlist";
+import { searchSongs } from "../spotifyData";
 
 export default function Main() {
   const [songs, setSongs] = useState([]);
   const [chosenSongs, setChosenSongs] = useState([]);
+  /*
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState([]);
+  
+
+    async function querySearch() {
+      if (!query) return;
+        try {
+            const resultQuery = await searchSongs(query);
+            setResults(resultQuery);
+        } catch (error) {
+            console.error("Error fetching songs:", error);
+        }
+    }
+    */
 
     function getHashKey(data) {
       return murmurhash.v3(data).toString();
     }
 
-    function search(formData) {
+    async function search(formData) {
         // api call passing down the input
         const search = formData.get("search");
+        /*
+        setQuery(search);
+        const queryResutlt = await querySearch();
+        console.log(queryResutlt);
+        */
         // console.log(search);
         const searchObj = {
           title: "Title:" + search,
@@ -30,7 +51,8 @@ export default function Main() {
     }
     
     function submitForm(sumbitData) {
-      console.log(sumbitData);
+      const playName = sumbitData.get("playlistName")
+      console.log(playName);
     }
     
     function addSong(songObj) {

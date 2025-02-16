@@ -153,6 +153,11 @@ main h1 {
   justify-content: flex-start;
   overflow-y: auto;
   flex-grow: 1;
+  max-height: 300px;
+}
+
+.playSongs {
+  max-height: 240px;
 }
 
 .songElement {
@@ -165,6 +170,22 @@ main h1 {
 .songElement h3 {
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
+}
+
+.songElement button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .artistAlbum {

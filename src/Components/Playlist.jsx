@@ -27,7 +27,7 @@ export default function Playlist(props) {
                 aria-label="Name your playlist"
                 name="playlistName"
               />
-              <ul className="songsList">
+              <ul className="songsList playSongs">
                 {listSongs}
               </ul>
               <button className="saving">Save to Spotify</button>
