@@ -1,6 +1,6 @@
 // Import environment variables
 const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-const clientSecret = import.meta.env.VITE_SPOTIFY_CLIENT_SECRET;
+const clientSecret = import.meta.env.VITE_SPOTIFY_API_KEY;
 
 // 🔹 Function to get Spotify Access Token
 export const getAccessToken = async () => {
