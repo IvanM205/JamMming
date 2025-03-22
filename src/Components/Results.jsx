@@ -13,6 +13,7 @@ export default function Results(props) {
               album={obj.album}
               handleClick={props.addSong}
               type={"results"}
+              trackId={obj.trackId}
             />
           </li>
         )

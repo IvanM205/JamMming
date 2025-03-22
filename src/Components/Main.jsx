@@ -4,6 +4,7 @@ import Form from "./Form";
 import Results from "/src/Components/Results";
 import Playlist from "./Playlist";
 import { searchSongs } from "../spotifyData.js";
+import { createPlaylist, addTracksToPlaylist } from "../playlist.js";
 
 export default function Main() {
   const [songs, setSongs] = useState([]);
@@ -24,11 +25,12 @@ export default function Main() {
           const searchObj = {
             title: "Title: " + result[i].name,
             artist: "Artist: " + result[i].artists[0].name,
-            album: "Album: " + result[i].album.name
+            album: "Album: " + result[i].album.name,
+            trackId: result[i].id
           }
-          const hash = getHashKey(searchObj.title + searchObj.artist + searchObj.album);
+          console.log(searchObj);
+          const hash = getHashKey(searchObj.title + searchObj.artist + searchObj.album + searchObj.trackId);
           searchObj.id = hash.toString();
-          console.log(searchObj.id);
 
           setSongs(prevSongs => {
             return [...prevSongs, searchObj]
@@ -36,10 +38,21 @@ export default function Main() {
         }
     }
     
-    function submitForm(sumbitData) {
-      const playName = sumbitData.get("playlistName")
-      console.log(playName);
-    }
+    async function submitForm(submitData) {
+      const playName = submitData.get("playlistName");
+      const newPlaylist = await createPlaylist(
+        playName,
+        `Playlist created on ${new Date().toLocaleDateString()}`,
+        false // Set to private by default
+      );
+      const playlistId = newPlaylist.id
+    
+      for (let i = 0; i < chosenSongs.length; i++) {
+        await addTracksToPlaylist(playlistId, chosenSongs[i].trackId)
+      }
+      
+      }
+    
     
     function addSong(songObj) {
       let toAdd = !chosenSongs.some((obj) => obj.id == songObj.id);

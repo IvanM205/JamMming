@@ -12,6 +12,7 @@ export default function Playlist(props) {
                 album={obj.album}
                 handleClick={props.substractSong}
                 type={"playlist"}
+                trackId={obj.trackId}
                />
             </li>
             )
@@ -19,7 +20,7 @@ export default function Playlist(props) {
         )
     return (
         <article className="rpContainer">
-            <form action={props.sumbitForm} className="submitForm">
+            <form action={props.submitForm} className="submitForm">
               <input
                 className="playlistName"
                 type="text"
