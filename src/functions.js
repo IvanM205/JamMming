@@ -27,7 +27,7 @@ export async function authenticateWithSpotify() {
   const getToken = async (code) => {
     const codeVerifier = localStorage.getItem('code_verifier');
     const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-    const redirectUri = "http://localhost:5173/";
+    const redirectUri = "https://jammmingim.netlify.app/";
     
     const url = "https://accounts.spotify.com/api/token";
     const payload = {
@@ -69,7 +69,7 @@ export async function authenticateWithSpotify() {
 
   // Constants
   const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
-  const redirectUri = "http://localhost:5173/";
+  const redirectUri = "https://jammmingim.netlify.app/";
   const scope = "user-read-private user-read-email playlist-modify-private playlist-modify-public";
 
   // Store the current URL before redirect to return to the same page

@@ -33,7 +33,7 @@ This app lets you search for songs on Spotify and create playlists! It's like a 
 * **Not Asking Too Much:** It doesn't ask Spotify for too much info at once.
 * **Dealing with Errors:** It's ready for problems, like if Spotify is down.
 
-### What We Learned
+### What I Learned
 
 * **Talking to Websites:** How to get info from Spotify's servers.
 * **Doing Things Later:** How to do things that take time.
