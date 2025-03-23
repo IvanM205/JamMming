@@ -40,3 +40,4 @@ This app lets you search for songs on Spotify and create playlists! It's like a 
 * **Remembering Stuff:** How to keep track of info in the app.
 
 This project was a cool way to learn about making apps that use other websites!
+Deployed on Netlify: https://jammmingim.netlify.app/
