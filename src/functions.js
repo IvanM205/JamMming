@@ -73,7 +73,7 @@ export async function authenticateWithSpotify() {
   const scope = "user-read-private user-read-email playlist-modify-private playlist-modify-public";
 
   // Store the current URL before redirect to return to the same page
-  localStorage.setItem('spotify_auth_redirect_path', window.location.pathname + window.location.search);
+  // localStorage.setItem('spotify_auth_redirect_path', window.location.pathname + window.location.search);
 
   // Check if we're returning from auth redirect
   const urlParams = new URLSearchParams(window.location.search);
